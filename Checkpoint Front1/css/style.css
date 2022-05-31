@@ -1,0 +1,190 @@
+body {
+    margin: 0;
+}
+
+.logo img {
+    position: absolute;
+    left: 122px;
+    top: 36px;
+    border-radius: 100%;
+    width: 100px;
+}
+
+header {
+    background-color: #169b62;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 213px;
+    left: 0px;
+    top: 0px;
+    font-size: 25px;
+    font-family: 'Irish Grover', cursive;
+}
+
+.home {
+    background-color: #966F33;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 36px;
+    position: absolute;
+    width: 197px;
+    height: 82px;
+    left: 555px;
+    top: 65px;
+}
+
+.curiosidades {
+    background-color: #966F33;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 36px;
+    position: absolute;
+    width: 197px;
+    height: 82px;
+    left: 779px;
+    top: 65px;
+}
+
+.video {
+    background-color: #966F33;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 36px;
+    position: absolute;
+    width: 197px;
+    height: 82px;
+    left: 1003px;
+    top: 65px;
+}
+
+
+.banner {
+    width: 100%;
+}
+
+.banner img {
+    width: 1280px;
+    height: 532px;
+}
+
+.top-cards {
+    font-family: 'Irish Grover', cursive;
+    width: 400px;
+    height: 42px;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 42px;
+    padding-top: 98px;
+    padding-bottom: 38px;
+
+}
+
+.cards {
+    width: 1280px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cards img {
+    width: 335px;
+    height: 534px;
+    background-color: grey;
+    border-radius: 31px;
+}
+
+
+.video2 {
+    display: flex;
+    align-items: center;
+}
+
+iframe {
+    width: 1077px;
+    height: 534px;
+    margin-top: 219px;
+    margin-bottom: 233px;
+    margin-right: 80px;
+    margin-left: 123px;
+}
+
+footer {
+    background-color: #ff893f;
+    position: absolute;
+    top: 2442px;
+    left: 0px;
+    width: 1280px;
+    height: 314px;
+
+}
+
+footer h1 {
+    position: absolute;
+    width: 217px;
+    height: 75px;
+    top: 29px;
+    left: 76px;
+    font-family: 'Irish Grover', cursive;
+    font-size: 62px;
+    font-weight: 400;
+    line-height: 75px;
+}
+
+.contact {
+    display: flex;
+    justify-content: space-between;
+}
+
+.contact .linkedin a img {
+    width: 141px;
+    height: 141px;
+    border-radius: 100%;
+}
+
+.contact .github a img {
+    width: 141px;
+    height: 141px;
+    border-radius: 100%;
+}
+
+
+.linkedin {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    position: absolute;
+    left: 378px;
+    top: 128px;
+}
+
+.linkedin p {
+    width: 136px;
+    height: 42px;
+    font-family: 'Irish Grover', cursive;
+    font-size: 36px;
+    line-height: 42px;
+    font-weight: 400;
+}
+
+.github {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    position: absolute;
+    left: 768px;
+    top: 128px;
+}
+
+.github p {
+    width: 136px;
+    height: 42px;
+    font-family: 'Irish Grover', cursive;
+    font-size: 36px;
+    line-height: 42px;
+    font-weight: 400;
+}
