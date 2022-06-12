@@ -1,190 +1,219 @@
-body {
+* {
+    box-sizing: border-box;
+}
+
+html {
+    width: 100%;
+    height: 100%;
+    font-family: sans-serif;
+}
+
+body,
+h1 {
     margin: 0;
 }
 
-.logo img {
-    position: absolute;
-    left: 122px;
-    top: 36px;
-    border-radius: 100%;
-    width: 100px;
+body {
+    width: 100%;
+    min-height: 100%;
 }
 
 header {
-    background-color: #169b62;
+    background-color: white;
     display: flex;
+    align-items: center;
     justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    height: 213px;
-    left: 0px;
-    top: 0px;
-    font-size: 25px;
-    font-family: 'Irish Grover', cursive;
 }
 
-.home {
-    background-color: #966F33;
+.logo img {
+    width: 165px;
+    height: auto;
+}
+
+header nav {
     display: flex;
     align-items: center;
-    justify-content: center;
-    border-radius: 36px;
-    position: absolute;
-    width: 197px;
-    height: 82px;
-    left: 555px;
-    top: 65px;
+    justify-content: space-between;
+    gap: 25px;
+    margin-right: 40px;
 }
 
-.curiosidades {
-    background-color: #966F33;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+header nav li {
+    background-color: orange;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 28px;
+    padding: 27px 66px;
     border-radius: 36px;
-    position: absolute;
-    width: 197px;
-    height: 82px;
-    left: 779px;
-    top: 65px;
+    list-style: none;
 }
-
-.video {
-    background-color: #966F33;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 36px;
-    position: absolute;
-    width: 197px;
-    height: 82px;
-    left: 1003px;
-    top: 65px;
-}
-
 
 .banner {
+    background-image: url("../img/banner.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
     width: 100%;
-}
-
-.banner img {
-    width: 1280px;
-    height: 532px;
-}
-
-.top-cards {
-    font-family: 'Irish Grover', cursive;
-    width: 400px;
-    height: 42px;
-    font-weight: 400;
-    font-size: 36px;
-    line-height: 42px;
-    padding-top: 98px;
-    padding-bottom: 38px;
-
-}
-
-.cards {
-    width: 1280px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    height: 732px;
 }
 
 .cards img {
     width: 335px;
     height: 534px;
-    background-color: grey;
     border-radius: 31px;
 }
 
-
-.video2 {
+.curiosidades {
+    margin-top: 98px;
     display: flex;
+    flex-direction: column;
     align-items: center;
+    gap: 37px;
 }
 
-iframe {
-    width: 1077px;
-    height: 534px;
-    margin-top: 219px;
-    margin-bottom: 233px;
-    margin-right: 80px;
-    margin-left: 123px;
-}
-
-footer {
-    background-color: #ff893f;
-    position: absolute;
-    top: 2442px;
-    left: 0px;
-    width: 1280px;
-    height: 314px;
+.cards {
+    display: flex;
+    flex-direction: row;
+    gap: 36px;
 
 }
 
-footer h1 {
-    position: absolute;
-    width: 217px;
-    height: 75px;
-    top: 29px;
-    left: 76px;
-    font-family: 'Irish Grover', cursive;
-    font-size: 62px;
+.curiosidades h1 {
     font-weight: 400;
-    line-height: 75px;
+    font-size: 36px;
+    line-height: 42px;
+}
+
+.video {
+    margin-top: 140px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 37px;
+}
+
+.video h1 {
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 42px;
+}
+
+.video iframe {
+    width: 70%;
+    height: 534px;
+}
+
+.contact img {
+    width: 141px;
+    height: 141px;
+    border-radius: 100%;
 }
 
 .contact {
     display: flex;
-    justify-content: space-between;
+    align-items: center;
+    justify-content: center;
+    gap: 145px;
 }
 
-.contact .linkedin a img {
-    width: 141px;
-    height: 141px;
-    border-radius: 100%;
+footer {
+    margin-top: 233px;
+    background-color: #7D859C;
 }
 
-.contact .github a img {
-    width: 141px;
-    height: 141px;
-    border-radius: 100%;
+footer h1 {
+    font-weight: 400;
+    font-size: 64px;
+    line-height: 75px;
+    margin-left: 76px;
+    margin-top: 29px;
 }
 
-
-.linkedin {
+.contact .linkedin {
     display: flex;
     align-items: center;
+    justify-content: center;
     flex-direction: column;
-    position: absolute;
-    left: 378px;
-    top: 128px;
+    gap: 24px;
 }
 
-.linkedin p {
-    width: 136px;
-    height: 42px;
-    font-family: 'Irish Grover', cursive;
-    font-size: 36px;
-    line-height: 42px;
-    font-weight: 400;
-}
-
-.github {
+.contact .github {
     display: flex;
     align-items: center;
+    justify-content: center;
     flex-direction: column;
-    position: absolute;
-    left: 768px;
-    top: 128px;
+    gap: 24px;
 }
 
-.github p {
-    width: 136px;
-    height: 42px;
-    font-family: 'Irish Grover', cursive;
+.contact p {
+    font-weight: bold;
     font-size: 36px;
     line-height: 42px;
-    font-weight: 400;
+}
+
+
+@media screen and (max-width: 768px) {
+
+    header {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 24px;
+        margin-right: 0;
+        margin-bottom: 60px;
+    }
+
+    .navigation nav {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 24px;
+        margin-right: 0;
+    }
+
+    main {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .curiosidades {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .cards {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    iframe {
+
+        width: 100%;
+        height: auto;
+    }
+
+    footer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .contact {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    footer h1 {
+        margin-left: -176px;
+        margin-bottom: 55px;
+    }
 }
