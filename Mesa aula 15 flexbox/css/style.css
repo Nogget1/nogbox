@@ -1,0 +1,227 @@
+/* CTRL + / (Barra) para começar um comentário */
+
+/* Adicionamos o seletor `*` para aplicar uma regra a todos os elementos da página */
+* {
+    box-sizing: border-box;
+}
+
+html {
+    width: 100%;
+    height: 100%;
+    font-family: sans-serif;
+}
+
+body,
+h1 {
+    margin: 0;
+}
+
+body {
+    width: 100%;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+header {
+    height: 64px;
+    background-color: #F0A83E;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.top-bar {
+    display: flex;
+    justify-content: space-between;
+    height: 20px;
+    background-color: #222222;
+    color: #F3F3F3;
+}
+
+.top-bar .oferta {
+    margin-left: 90px;
+}
+
+.top-bar .portugues {
+    margin-right: 50px;
+}
+
+.portugues span {
+    margin-left: 12px;
+}
+
+
+
+header nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    align-items: center;
+    gap: 25px;
+    margin-right: 40px;
+}
+
+header nav a {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 18px;
+
+}
+
+header nav a img {
+    width: 14px;
+    height: 15px;
+}
+
+header .logo {
+    margin-left: 40px;
+}
+
+header nav a::before {
+    content: url('img/pawprint-1.png')
+}
+
+
+
+
+main {
+    flex-grow: 1;
+    background-image: url("../img/banner.png");
+    background-size: 100% 100%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    flex-direction: column;
+    gap: 12px;
+    height: 509px;
+}
+
+.prazer-te-ter {
+    width: 365px;
+    height: 54px;
+    background-color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 12px;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 35px;
+    text-align: center;
+}
+
+.desconto-txt {
+    margin-right: 89px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+}
+
+.comedouros {
+    width: 141px;
+    height: 49px;
+    background-color: #F0A83E;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 117px;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 19px;
+    text-align: center;
+    color: #ffffff;
+
+}
+
+.section-1 {
+    margin-top: 20px;
+}
+
+.top-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.top-section h1 {
+    color: #3C2313;
+    font-size: 40px;
+    line-height: 47px;
+    font-weight: 700;
+}
+
+.top-section img {
+    width: 67px;
+    height: 71px;
+}
+
+.produtos {
+    display: flex;
+    flex-direction: row;
+    gap: 13px;
+    font-size: 15px;
+    line-height: 18px;
+    font-weight: 400;
+}
+
+
+section .cards {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+
+}
+
+section .card {
+    background-color: #FBFAF6;
+}
+
+section .under-product {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+section .under-product span {
+    font-weight: bold;
+    font-size: 15px;
+    line-height: 18px;
+    color: #3C2313;
+}
+
+section .under-product p {
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 18px;
+    color: #F0A83E;
+}
+
+
+
+footer {
+    display: flex;
+    flex-direction: column;
+}
+
+.newsletter {
+    background-color: gold;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+    background-color: brown;
+}
+
+.copyrights {
+    background-color: black;
+    color: white;
+}

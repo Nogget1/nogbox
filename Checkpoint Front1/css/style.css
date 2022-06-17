@@ -1,5 +1,6 @@
 * {
     box-sizing: border-box;
+    @import url('https://fonts.googleapis.com/css2?family=Irish+Grover&display=swap');
 }
 
 html {
@@ -16,6 +17,7 @@ h1 {
 body {
     width: 100%;
     min-height: 100%;
+    font-family: 'Irish Grover', cursive;
 }
 
 header {
@@ -28,6 +30,7 @@ header {
 .logo img {
     width: 165px;
     height: auto;
+    margin-left: 122px;
 }
 
 header nav {
@@ -49,7 +52,7 @@ header nav li {
 }
 
 .banner {
-    background-image: url("../img/banner.jpg");
+    background-image: url("../img/banner123.jpg");
     background-repeat: no-repeat;
     background-size: 100% 100%;
     width: 100%;
@@ -162,6 +165,11 @@ footer h1 {
         margin-bottom: 60px;
     }
 
+    .logo img {
+        margin-left: 0;
+    }
+
+
     .navigation nav {
         display: flex;
         flex-direction: column;
@@ -215,5 +223,9 @@ footer h1 {
     footer h1 {
         margin-left: -176px;
         margin-bottom: 55px;
+    }
+
+    .banner {
+        background-size: cover;
     }
 }

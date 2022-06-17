@@ -1,0 +1,42 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body {
+    font-family: sans-serif;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 25px 20px;
+    background: #222222;
+    min-height: 100px;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+header nav {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+header button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin-left: 42px;
+    margin-right: 35px;
+}
+
+.banner {
+    background-image: url("../img/banner.png");
+    background-size: cover;
+    width: 100%;
+    min-height: 512px;
+}

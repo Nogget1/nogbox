@@ -1,0 +1,84 @@
+.semaforo {
+    width: 240px;
+    background-color: black;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-radius: 20px;
+    margin-left: 40%;
+}
+
+.semaforo div {
+    width: 200px;
+    height: 200px;
+    background-color: white;
+    border-radius: 100%;
+    margin: 20px;
+
+}
+
+.semaforo .parar {
+    background-color: red;
+    opacity: 0.2;
+    transition: opacity 4s;
+
+}
+
+@keyframes changered {
+    from {
+        opacity: 0.2;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+div .parar {
+    animation-duration: 3s;
+    animation-name: changered;
+    animation-iteration-count: infinite;
+}
+
+.semaforo .atencao {
+    background-color: yellow;
+    opacity: 0.2;
+}
+
+@keyframes changeyellow {
+    from {
+        opacity: 0.2;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+div .atencao {
+    animation-duration: 3s;
+    animation-delay: 3s;
+    animation-name: changeyellow;
+    animation-iteration-count: infinite;
+}
+
+.semaforo .avance {
+    background-color: green;
+    opacity: 0.2;
+}
+
+@keyframes changegreen {
+    from {
+        opacity: 0.2;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+div .avance {
+    animation-duration: 3s;
+    animation-delay: 6s;
+    animation-name: changegreen;
+    animation-iteration-count: infinite;
+}
