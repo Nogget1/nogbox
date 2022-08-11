@@ -62,3 +62,6 @@ function Circunferencia(raio) {
 
 console.log(Circunferencia(2))
 
+
+
+
