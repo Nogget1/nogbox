@@ -1,6 +1,6 @@
 
 
-//Testes introdutórios
+// Testes introdutórios
 // let numbers = [22, 33, 54, 66, 72];
 
 // console.log(numbers[numbers.length]);
@@ -15,7 +15,7 @@
 // Imprimir inverso
 // let numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 
-//opção 1 
+// opção 1
 // function imprimirInverso(numbers) {
 //     let length = numbers.length;
 //     for (var i = length - 1; i >= 0; i--) {
@@ -25,7 +25,7 @@
 // }
 // console.log(imprimirInverso(numbers));
 
-//Opção 2
+// Opção 2
 // console.log(numbers)
 // function imprimirInverso(array) {
 //     array.reverse();
@@ -34,14 +34,14 @@
 
 // imprimirInverso(numbers)
 
-//Inverter
+// Inverter
 
 // function inverter(numbers) {
 //         numbers.reverse();
 //         console.log(numbers)
 //     }
 
-//Somar Array
+// Somar Array
 
 // function somarArray(array) {
 //     return array[0] + array[1] + array[2] + array[3]
@@ -51,7 +51,7 @@
 // console.log(somarArray([10, 3, 10, 4]));
 // console.log(somarArray([-5, 100, 0, 0]));
 
-//Join Array
+// Join Array
 // let juntar = ["o", "l", "á"];
 // let juntar1 = ["t", "c", "h", "a", "u"];
 // console.log(juntar.join("") + " " + juntar1.join(""));
@@ -83,9 +83,9 @@
 // arrayFinalFinal = arrayFinal.map(p => p.toUpperCase());
 // console.log(arrayFinalFinal);
 
-//Compare arrays
+// Compare arrays
 
-const asiaScores = [8, 10, 6, 9, 10, 6, 6, 8, 4];
-const euroScores = [8, 10, 6, 8, 10, 6, 7, 9, 5];
-console.log(asiaScores === euroScores)
+// const asiaScores = [8, 10, 6, 9, 10, 6, 6, 8, 4];
+// const euroScores = [8, 10, 6, 8, 10, 6, 7, 9, 5];
+// console.log(asiaScores === euroScores)
 
