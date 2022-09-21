@@ -78,6 +78,7 @@
 function moverZeros(array) {
     let arrayZero = [];
     let arrayCheios = [];
+
     for (i = 0; i < array.length; i++) {
         if (array[i] === 0) {
             arrayZero.push(array[i])
@@ -89,7 +90,42 @@ function moverZeros(array) {
 }
 
 console.log('Exercício 6')
-moverZeros([false, 1, 1, 2, 0, 1, 3, "a"])
+moverZeros([false, 1, 1, 2, 0, 1, 3, "a"]);
+
+
+
+
+
+//Exercício 7
+let array7a = [1, 2, 3];
+let array7b = ['o', 'l', 'a'];
+function arrayHandler(array1, array2) {
+    for (var i = 0; i < array1.length; i++) {
+        console.log('eu sou ' + array1[i] + ' e eu sou ' + array2[i])
+    }
+};
+//console.log(arrayHandler(array7a, array7b))
+
+//Exercício 8
+function arrayObjects(num) {
+    let newArray = []
+    for (var i = 1; i <= num; i++) {
+        newArray.push({ valor: i })
+    }
+    return newArray;
+}
+//console.log(arrayObjects(5))
+
+//Exercício 9
+
+function arrayObjects2(num, str) {
+    let newArray = [];
+    for (var i = 1; i <= num; i++) {
+        newArray.push({ [str]: i })
+    }
+    return newArray;
+}
+//console.log(arrayObjects2(5,'olá'))
 
 
 
