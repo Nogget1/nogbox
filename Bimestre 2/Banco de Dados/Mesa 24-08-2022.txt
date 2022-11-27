@@ -1,0 +1,142 @@
+ /*Categorias e produtos*/
+ 
+SELECT CategoriaID,CategoriaNome,Descricao,Imagem #1) Queremos ter uma lista de todas as categorias
+FROM Categorias;
+
+#2) Como as categorias não possuem imagens, você está interessado em obter apenas um Nome e descrição da lista de categorias.
+SELECT CategoriaNome,Descricao
+FROM Categorias;
+
+#3) Obtenha uma lista dos produtos
+SELECT *
+FROM Produtos; 
+ 
+ #4) Existem produtos descontinuados? 
+SELECT Descontinuado
+FROM Produtos
+WHERE Descontinuado = 1; 
+ 
+#5) Quais são os produtos que eles fornecem? 
+SELECT ProdutoNome 
+FROM Produtos
+WHERE ProvedorID = 8; 
+
+#6)  Queremos saber todos os produtos cujo preço unitário se encontra entre 10 e 22.
+SELECT ProdutoNome,PrecoUnitario
+FROM produtos
+WHERE PrecoUnitario BETWEEN 10 AND 22;
+
+#7) Existem produtos a solicitar?
+SELECT ProdutoNome,UnidadesEstoque,NivelReabastecimento,UnidadesPedidas
+FROM produtos
+WHERE UnidadesEstoque < NivelReabastecimento;
+
+#8) Você quer saber todos os produtos da lista anterior, mas que as unidades pedidas sejam iguais a zero.
+SELECT ProdutoNome,UnidadesEstoque,NivelReabastecimento,UnidadesPedidas
+FROM produtos
+WHERE UnidadesEstoque < NivelReabastecimento AND UnidadesPedidas = 0;
+ 
+ /*clientes*/
+ SELECT Contato,Empresa,Titulo,Pais
+ FROM Clientes
+ ORDER BY Pais;
+ 
+ #2)  Queremos atender todos os clientes que possuem o título de  “Proprietário"
+SELECT Contato,Empresa,Titulo,Pais
+FROM Clientes
+WHERE Titulo LIKE '%Owner%'
+ORDER BY Pais;
+ 
+ #3)Podemos ajudá-lo a obter uma lista com todos os contatos que começam com a letra C?
+SELECT Contato,Empresa,Titulo,Pais
+ FROM Clientes
+ WHERE Contato LIKE 'c%'
+ ORDER BY Pais;
+ 
+#faturas
+
+#1) Obtenha uma lista de todas as faturas, ordenadas por data da fatura em ordem ascendente.#
+
+SELECT
+*
+FROM faturas ORDER BY DataFatura ASC
+
+#2) Agora é necessário uma lista de faturas com o país de envio "EUA" eque a FormaeEnvio seja diferente de 3.#
+SELECT  *
+ FROM faturas
+ WHERE PaisEnvio LIKE "EUA%" 
+ AND FormaEnvio != 3
+
+#3) O cliente 'GOURL' fez um pedido? Sim.
+
+SELECT 
+*
+FROM faturas
+WHERE ClienteID LIKE "GOURL"
+
+#4) Você deseja visualizar todas as faturas dos funcionários 2, 3, 5, 8 e 9.
+Rafa o que o professor explicou do OR é o que vc vai usar kkkk
+ahhahaha
+VAa
+
+
+
+
+
+
+
+
+/*Queries I - Parte II*/
+/*Produtos*/
+
+#1) Obtenha a lista de todos os produtos em ordem decrescente por preço unitário.
+SELECT ProdutoID,ProdutoNome,PrecoUnitario
+FROM produtos
+ORDER BY PrecoUnitario DESC;
+
+#2) Obtenha a lista dos 5 melhores produtos cujo preço unitário é o mais "Caro".
+SELECT ProdutoID,ProdutoNome,PrecoUnitario
+FROM produtos
+ORDER BY PrecoUnitario DESC
+LIMIT 5;
+
+#3) Obtenha um top 10 dos produtos com mais unidades em estoque.
+SELECT ProdutoID,ProdutoNome,UnidadesEstoque
+FROM produtos
+ORDER BY UnidadesEstoque DESC
+LIMIT 10;
+
+/*DetalheFatura*/
+
+#1) Obtenha uma lista de FaturaId, Produto, Quantidade.
+SELECT FaturaId,ProdutoID,Quantidade
+FROM detalhefatura;
+
+#2)Classifique a lista acima por Quantidade decrescente. 
+SELECT FaturaId,ProdutoID,Quantidade
+FROM detalhefatura
+ORDER BY Quantidade DESC;
+
+#3)Filtre a mesma lista apenas para os produtos cuja quantidade esteja entre 50 e 100. 
+SELECT FaturaId,ProdutoID,Quantidade
+FROM detalhefatura
+WHERE Quantidade BETWEEN 50 AND 100
+ORDER BY Quantidade DESC;
+
+#4) lista com os seguintes nomes de coluna: Número da fatura (FaturaId), Produto (ProdutoId), Total (Preço Unitário * Quantidade)
+SELECT FaturaId AS 'Numero da fatura',ProdutoID AS Produto,Quantidade * PrecoUnitario 
+FROM detalhefatura;
+
+
+
+
+
+
+Nomes:
+Rafaela Barbosa
+Mauricio Sampaio
+Lucas De Almeida
+Felipe Levy
+Maycon Douglas
+Soares Josue
+Lucas Anselmo

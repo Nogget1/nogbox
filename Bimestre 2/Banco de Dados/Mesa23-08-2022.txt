@@ -1,0 +1,71 @@
+CREATE TABLE IF NOT EXISTS avatar (
+	idAvatar INT NOT NULL,
+  nome VARCHAR(45) NULL,
+  urlimagem VARCHAR(100),
+  CONSTRAINT PKavatar_id PRIMARY KEY (idAvatar),
+  );
+  
+CREATE TABLE IF NOT EXISTS pais (
+  idPais INT NOT NULL,
+  nome VARCHAR(45) NULL,
+  CONSTRAINT PKpais_id PRIMARY KEY (idPais),
+  );
+
+CREATE TABLE IF NOT EXISTS usuario (
+	idUsuario INT NOT NULL,
+  nome VARCHAR(45) NULL,
+  email VARCHAR(45) NOT NULL,
+  senha VARCHAR(45) NOT NULL,
+  dataNascimento DATETIME,
+  cep VARCHAR(45) NULL,
+  Pais_idPais INT NOT NULL,
+  Avatar_idAvatar INT NOT NULL, 
+  CONSTRAINT PK_usuario_id PRIMARY KEY (idUsuario),
+  CONSTRAINT FK_pais_id FOREIGN KEY (Pais_idPais) REFERENCES pais (idPais),
+  CONSTRAINT FK_avatar_id FOREIGN KEY (Avatar_idAvatar) REFERENCES avatar (idAvatar)
+	);
+  
+CREATE TABLE IF NOT EXISTS canal (
+	idCanal INT NOT NULL,
+  nome VARCHAR(45) NULL,
+  descricao TEXT NULL,
+  dataCriacao DATETIME NULL,
+  Usuario_idUsuario INT NOT NULL,
+  CONSTRAINT PK_canal_id PRIMARY KEY (idCanal),
+  CONSTRAINT FK_usuario_id FOREIGN KEY (Usuario_idUsuario) REFERENCES usuario (idUsuario)
+  );
+  
+CREATE TABLE IF NOT EXISTS playlist (
+	idPlaylist INT NOT NULL,
+  nome VARCHAR(45) NULL,
+  dataCriacao DATETIME NULL,
+  privado SAMLLINT(6) NULL,
+  Usuario_idUsuario INT NOT NULL,
+  CONSTRAINT PK_playlist_id PRIMARY KEY (idPlaylist),
+  CONSTRAINT FKusuario_id FOREIGN KEY (Usuario_idUsuario) REFERENCES usuario (idUsuario)
+  );
+
+CREATE TABLE IF NOT EXISTS video (
+	idVideo INT NOT NULL,
+  Usuario_idUsuario INT NOT NULL,
+	titulo VARCHAR(100) NULL,
+  descricao TEXT NULL,
+  tamanho DOUBLE NULL,
+  nomeArquivo VARCHAR(100) NULL,
+  duracao DOUBLE NULL,
+  imagem VARCHAR(100) NULL,
+  qtdReproducoes INT NULL,
+  qtdLikes INT NULL,
+  qtdDislikes INT NULL,
+  privado SMALLINT(6) NULL,
+  datapublicacao DATETIME NULL,
+  CONSTRAINT PK_video_id PRIMARY KEY (idVideo),
+  CONSTRAINT FK__usuario_id FOREIGN KEY (Usuario_idUsuario) REFERENCES usuario (idUsuario)
+  );
+  
+CREATE TABLE IF NOT EXISTS playlis_video (
+	Video_idVideo INT NOT NULL,
+  Playlist_idPlaylist INT NOT NULL,
+  CONSTRAINT FK_video_id FOREIGN KEY (Video_idVideo) REFERENCES video (idVideo),
+	CONSTRAINT FK_playlist_id FOREIGN KEY (Playlist_idPlaylist) REFERENCES playlist (idPlaylist)
+	);
