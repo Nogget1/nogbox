@@ -1,18 +1,18 @@
 import styles from './color.module.css';
 
-export function Color({ color, toggleColorBoughtStatus }) {
+export function Color({ color }) {
   return (
-    <div className={styles.card}>
-      <input type="checkbox" onClick={toggleColorBoughtStatus} />
+    <div className={styles.card} style={{ backgroundColor: color.hex }}>
+      
       <li>
         {color.isBought ?
           (
             <del>
-              {color.amount} {color.name}
+              {color.name} {color.hex}
             </del>
           ) :
           (
-            `${color.amount} ${color.name}`
+            `${color.name} ${color.hex}`
           )
         }
       </li>

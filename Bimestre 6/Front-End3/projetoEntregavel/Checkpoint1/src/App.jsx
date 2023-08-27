@@ -7,10 +7,23 @@ function App() {
   const [nomeCor, setnomeCor] = useState('');
   const [hexCor, setHexCor] = useState(0);
 
+
   const handleColorSubmit = (event) => {
     event.preventDefault();
+  
+    const newColor = { name: nomeCor, hex: hexCor, isBought: false };
 
-    const newColor = { name: nomeCor, amount: hexCor, isBought: false };
+    if (nomeCor === '') {
+      return;
+    }
+
+    const regex = /^#([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$/;
+
+    if (!hexCor.match(regex)) {
+      alert('O código hexadecimal é inválido.');
+      return;
+    }
+  
     setColorList((OldColorList) => [...OldColorList, newColor]);
   }
 
@@ -23,6 +36,8 @@ function App() {
     });
     setColorList(listWithToggledStatus);
   }
+
+  
 
   return (
     <>
@@ -45,7 +60,7 @@ function App() {
             id='hexCor'
             placeholder='Digite o Hexadecimal da sua cor'
             onChange={(event) => setHexCor(event.target.value)}
-            value={hexCor}
+            // value={hexCor}
           />
           <button
             type="submit"
