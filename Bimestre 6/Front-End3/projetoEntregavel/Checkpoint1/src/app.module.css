@@ -1,5 +1,9 @@
 .main {
   padding: 2rem 0;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
 }
 
 .listSection {
@@ -18,15 +22,65 @@
 .listContainer ul {
   list-style-type: none;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(60px, 1fr));
+  grid-template-columns: repeat(2, 1fr);
   gap: 10px;
+  
 }
 
+
+
 .FormContainer {
-  display: flex;
+  /* display: flex; */
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
   gap: 0.5rem;
   padding: 2rem 0;
+  width: 1200px;
+  height: 309px;
+  flex-shrink: 0;
+  border-radius: 12px;
+  background: #202020;
+}
+
+.FormContainer button{
+  width: 231px;
+  height: 57px;
+  border-radius: 12px;
+  background: #36CE7C;
+  color: black;
+}
+
+.buttonWrapper{
+  display: flex;
+  align-items: right;
+  justify-content: end;
+  margin-right: 32px;
+}
+
+.FormContainer h3{
+  color: #ffffff;
+  font-family: "Poppins-Black", Helvetica;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 900;
+  line-height: normal;
+  left: 0;
+}
+
+.inputWrapper{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 28px;
+  margin-bottom: 28px;
+}
+
+.inputBlock input{
+  width: 558px;
+  height: 48px;
+  border-radius: 12px;
+  background: #353535;
+  box-shadow: none;
 }

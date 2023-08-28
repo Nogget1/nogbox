@@ -1,4 +1,8 @@
 .card {
   display: flex;
   gap: 0.8rem;
+  border-radius: 12px;
+  width: 590px;
+  height: 258px;
+  border-radius: 20px;
 }

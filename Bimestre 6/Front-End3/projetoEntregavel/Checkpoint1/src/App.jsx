@@ -44,29 +44,38 @@ function App() {
       <main className={styles.main}>
         <form className={styles.FormContainer} onSubmit={handleColorSubmit}>
           <h3>Adicionar nova cor</h3>
-          <p>Nome</p>
-          <input
-            type="text"
-            name='nomeCor'
-            id='nomeCor'
-            placeholder='Digite o nome da sua cor'
-            onChange={(event) => setnomeCor(event.target.value)}
-            value={nomeCor}
-          />
-          <p>Cor</p>
-          <input
-            type="text"
-            name='hexCor'
-            id='hexCor'
-            placeholder='Digite o Hexadecimal da sua cor'
-            onChange={(event) => setHexCor(event.target.value)}
-            // value={hexCor}
-          />
-          <button
-            type="submit"
-            disabled={nomeCor === ''}
-          >Add
-          </button>
+          <div className={styles.inputWrapper}>
+            <div className={styles.inputBlock}>
+            <p>Nome</p>
+            <input
+              type="text"
+              name='nomeCor'
+              id='nomeCor'
+              placeholder='Digite o nome da sua cor'
+              onChange={(event) => setnomeCor(event.target.value)}
+              value={nomeCor}
+            />
+            </div>
+            <div className={styles.inputBlock}>
+            <p>Cor</p>
+            <input
+              type="text"
+              name='hexCor'
+              id='hexCor'
+              placeholder='Digite o Hexadecimal da sua cor'
+              onChange={(event) => setHexCor(event.target.value)}
+              // value={hexCor}
+            />
+            </div>
+          </div>
+          <div className={styles.buttonWrapper}>
+            <button
+              type="submit"
+              className='submit'
+              disabled={nomeCor === ''}
+            >Add
+            </button>
+          </div>
         </form>
         <section className={styles.listSection}>
           <h3>Minhas Cores Favoritas</h3>
