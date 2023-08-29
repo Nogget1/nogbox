@@ -6,3 +6,16 @@
   height: 258px;
   border-radius: 20px;
 }
+
+.card li{
+  color: #ffffff;
+  font-family: "Poppins-Black", Helvetica;
+  font-size: 32px;
+  font-weight: 900;
+  left: 0;
+  letter-spacing: 0;
+  line-height: normal;
+  top: 0;
+}
+
+

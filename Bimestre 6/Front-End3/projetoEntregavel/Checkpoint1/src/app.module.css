@@ -27,6 +27,15 @@
   
 }
 
+.listSection h3{
+  color: #ffffff;
+  font-family: "Poppins-Black", Helvetica;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 900;
+  line-height: normal; 
+}
+
 
 
 .FormContainer {
@@ -65,7 +74,8 @@
   font-style: normal;
   font-weight: 900;
   line-height: normal;
-  left: 0;
+  margin-left: 32px;
+  margin-bottom: 32px;  
 }
 
 .inputWrapper{

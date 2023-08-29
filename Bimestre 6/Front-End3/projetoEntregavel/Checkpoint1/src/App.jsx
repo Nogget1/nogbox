@@ -13,7 +13,8 @@ function App() {
   
     const newColor = { name: nomeCor, hex: hexCor, isBought: false };
 
-    if (nomeCor === '') {
+    if (nomeCor.length < 3) {
+      alert('O nome da cor deve ter pelo menos 3 caracteres.');
       return;
     }
 
@@ -78,7 +79,7 @@ function App() {
           </div>
         </form>
         <section className={styles.listSection}>
-          <h3>Minhas Cores Favoritas</h3>
+          <h3>Cores Favoritas</h3>
           <div className={styles.listContainer}>
             <ul>
               {ColorList && (
